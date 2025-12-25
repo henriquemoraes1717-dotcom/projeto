@@ -1,0 +1,165 @@
+/* =========================
+   BASE CSS (para TODAS as páginas)
+   Objetivo: consistência + legibilidade + responsivo + acessibilidade
+========================= */
+
+/* RESET + BOX MODEL */
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+}
+
+/* TIPOGRAFIA E COR PADRÃO */
+:root{
+  --texto: #212121;
+  --fundo: #ffffff;
+  --link: #007bbf;
+  --borda: #e5e7eb;
+  --fonte: Arial, Helvetica, sans-serif;
+}
+
+body{
+  font-family: var(--fonte);
+  color: var(--texto);
+  background: var(--fundo);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* IMAGENS E MÍDIA RESPONSIVAS */
+img,
+video{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* LINKS */
+a{
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+/* TÍTULOS E PARÁGRAFOS (BASE) */
+h1, h2, h3, h4, h5, h6{
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+p{
+  margin: 0 0 16px 0;
+}
+
+/* FORMULÁRIOS (BASE) */
+button,
+input,
+select,
+textarea{
+  font: inherit;
+}
+
+input,
+select,
+textarea{
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: #fff;
+}
+
+textarea{
+  min-height: 120px;
+  resize: vertical;
+}
+
+button{
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: var(--link);
+  color: #fff;
+  font-weight: 700;
+}
+
+button:hover{
+  opacity: .92;
+}
+
+/* FOCO VISÍVEL (ACESSIBILIDADE) */
+:focus-visible{
+  outline: 3px solid rgba(0, 123, 191, .35);
+  outline-offset: 2px;
+}
+
+/* LISTAS (BASE) */
+ul, ol{
+  margin: 0 0 16px 22px;
+}
+
+li{
+  margin: 6px 0;
+}
+
+/* TABELAS (BASE) */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 16px 0;
+}
+
+th, td{
+  border: 1px solid var(--borda);
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th{
+  background: #f3f4f6;
+}
+
+/* CONTAINER PADRÃO (opcional, mas útil em todas) */
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* RESPONSIVO MÍNIMO */
+@media (max-width: 600px){
+  .container{
+    padding: 12px;
+  }
+}
+
+/* =========================
+   ESTILOS ESPECÍFICOS DA PÁGINA
+   Objetivo: personalização + identidade visual */
+
+h1 {
+    color:red;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+li{
+    list-style-type: none;
+    display: inline;
+    margin-right: 15px;
+}
